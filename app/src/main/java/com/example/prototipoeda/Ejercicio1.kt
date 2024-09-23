@@ -1,6 +1,10 @@
 package com.example.prototipoeda
 
+import android.content.Intent
+import android.media.Image
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +19,16 @@ class Ejercicio1 : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+           val botonAtras = findViewById<ImageButton>(R.id.BotonAtras1)
+           val botonsiguiente = findViewById<Button>(R.id.BotonSiguiente)
+        botonAtras.setOnClickListener{
+            val intent = Intent(this,Menu::class.java)
+            startActivity(intent)
+        }
+        botonsiguiente.setOnClickListener{
+            val intent = Intent(this,Ejercicio2::class.java)
+            startActivity(intent)
         }
     }
 }

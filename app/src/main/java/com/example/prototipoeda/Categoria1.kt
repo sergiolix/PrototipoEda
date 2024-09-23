@@ -18,8 +18,9 @@ class Categoria1 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val BackButton = findViewById<ImageButton>(R.id.BotonAtras2)
+        val BackButton = findViewById<ImageButton>(R.id.BotonAtras1)
         val BotonEjercicio1= findViewById<ImageButton>(R.id.BotonEjercicio1)
+        val BotonEjercicio2 = findViewById<ImageButton>(R.id.BotonEjercicio2)
 
         BackButton.setOnClickListener{
              val intent = Intent(this,Menu::class.java)
@@ -28,6 +29,10 @@ class Categoria1 : AppCompatActivity() {
 
         BotonEjercicio1.setOnClickListener{
             val intent = Intent (this,Ejercicio1::class.java)
+            startActivity(intent)
+        }
+        BotonEjercicio2.setOnClickListener{
+            val intent = Intent (this,Ejercicio2::class.java)
             startActivity(intent)
         }
     }

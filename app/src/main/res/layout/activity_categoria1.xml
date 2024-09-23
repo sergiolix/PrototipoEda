@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/BotonAtras2"
+        android:id="@+id/BotonAtras1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/BotonAtras2"
+        app:layout_constraintStart_toEndOf="@+id/BotonAtras1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -52,14 +52,14 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="5dp"
         android:background="#181759"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintEnd_toStartOf="@+id/BotonEjercicio2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/image_removebg_preview__2_" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/BotonEjercicio2"
         android:layout_width="177dp"
         android:layout_height="181dp"
         android:layout_marginStart="5dp"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageButton9"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
+        app:layout_constraintTop_toBottomOf="@+id/BotonEjercicio2"
         app:srcCompat="@drawable/image_removebg_preview__5_" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
