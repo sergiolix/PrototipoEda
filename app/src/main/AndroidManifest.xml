@@ -13,13 +13,17 @@
         android:theme="@style/Theme.PrototipoEda"
         tools:targetApi="31">
         <activity
+            android:name=".categoria4"
+            android:exported="false"
+            android:theme="@style/Theme.PrototipoEda" />
+        <activity
             android:name=".Ejercicio3"
             android:exported="false" />
         <activity
-            android:name=".Ejercicio2"
+            android:name=".Ejercicio1ctg1"
             android:exported="false" />
         <activity
-            android:name=".Ejercicio1"
+            android:name=".Ejercicio1ctg4"
             android:exported="false" />
         <activity
             android:name=".Categoria1"

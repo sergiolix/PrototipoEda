@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ejercicio1ctg1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main1_ejercicio2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#181759"
+        tools:context=".Categoria1"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-79dp">
+
+        <Button
+            android:id="@+id/botonSiguiente"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="133dp"
+            android:layout_height="74dp"
+            android:layout_marginBottom="28dp"
+            android:text="Siguiente Ejercicio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.186"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Imagen3"
+            app:layout_constraintVertical_bias="0.403" />
+
+        <Button
+            android:id="@+id/BotonEnviar"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="133dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="28dp"
+            android:text="Confirmar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.416"
+            app:layout_constraintStart_toEndOf="@+id/botonSiguiente"
+            app:layout_constraintTop_toBottomOf="@+id/Imagen4"
+            app:layout_constraintVertical_bias="0.403" />
+
+        <ImageButton
+            android:id="@+id/Imagen4"
+            style="@android:style/Widget.DeviceDefault.ImageButton"
+            android:layout_width="170dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintStart_toEndOf="@+id/Imagen3"
+            app:layout_constraintTop_toBottomOf="@+id/Imagen2"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/cama" />
+
+        <ImageButton
+            android:id="@+id/Imagen3"
+            style="@android:style/Widget.DeviceDefault.ImageButton"
+            android:layout_width="170dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Imagen1"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/cama" />
+
+        <ImageButton
+            android:id="@+id/Imagen2"
+            style="@android:style/Widget.DeviceDefault.ImageButton"
+            android:layout_width="170dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintStart_toEndOf="@+id/Imagen1"
+            app:layout_constraintTop_toBottomOf="@+id/TextoLetra"
+            app:layout_constraintVertical_bias="0.002"
+            app:srcCompat="@drawable/cama" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#EE1F1E6A"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textoBar"
+            android:layout_width="132dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="Ejercicio"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/BotonAtras1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/BotonAtras1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#EE1F1E6A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <ImageButton
+            android:id="@+id/Imagen1"
+            style="@android:style/Widget.DeviceDefault.ImageButton"
+            android:layout_width="170dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextoLetra"
+            app:layout_constraintVertical_bias="0.004"
+            app:srcCompat="@drawable/cama" />
+
+        <TextView
+            android:id="@+id/TextoLetra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Letra"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.009" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

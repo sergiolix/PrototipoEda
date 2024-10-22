@@ -2,19 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ejercicio2">
+    tools:context=".Ejercicio1ctg4">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
+        android:id="@+id/main1_ejercicio1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#181759"
         tools:context=".Categoria1"
-        tools:layout_editor_absoluteX="-94dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="-80dp"
+        tools:layout_editor_absoluteY="29dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -39,12 +39,12 @@
             app:srcCompat="@drawable/baseline_arrow_back_24" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/TextoBar"
             android:layout_width="132dp"
             android:layout_height="46dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
-            android:text="Ejercicio2"
+            android:text="Ejercicio1"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24sp"
@@ -52,15 +52,27 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="TEXTO"
+            android:id="@+id/TextoEjerciciosCtg4"
+            android:layout_width="302dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:text="Ordena la Oracion: me voy para la casa"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/BotonEnviar"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="113dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="112dp"
+            android:text="Enviar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.785"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -69,13 +81,28 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="127dp"
             android:layout_height="71dp"
-            android:layout_marginTop="24dp"
             android:text="Siguiente Ejercicio"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.92" />
+            app:layout_constraintTop_toBottomOf="@+id/TextoRespuesta"
+            app:layout_constraintVertical_bias="0.408" />
+
+        <EditText
+            android:id="@+id/TextoRespuesta"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="159dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="120dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Respuesta"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.253"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -87,17 +114,6 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="79dp"
-            android:layout_height="64dp"
-            app:layout_constraintBottom_toTopOf="@+id/BotonSiguiente"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.65"
-            app:srcCompat="@android:drawable/ic_btn_speak_now" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
