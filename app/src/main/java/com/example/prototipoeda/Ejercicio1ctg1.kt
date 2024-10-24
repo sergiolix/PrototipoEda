@@ -3,11 +3,13 @@ package com.example.prototipoeda
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -119,9 +121,9 @@ class Ejercicio1ctg1 : AppCompatActivity() {
             if (combinacionCorrecta != null) {
                 val esCorrecto = combinacionCorrecta.all { estados[it] }
                 if (esCorrecto) {
-                    Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show()
+                    mostrarDialogoFelicitaciones()
                 } else {
-                    Toast.makeText(this, "Incorrecto, Sigue intentando", Toast.LENGTH_SHORT).show()
+                    mostrarDialogomal()
                 }
             } else {
 
@@ -144,5 +146,37 @@ class Ejercicio1ctg1 : AppCompatActivity() {
                 Toast.makeText(this, "No hay mas ejercicios", Toast.LENGTH_SHORT).show()
         }
         }
+    }
+    private fun mostrarDialogoFelicitaciones() {
+        // Inflar el layout personalizado
+        val inflater: LayoutInflater = layoutInflater
+        val dialogView = inflater.inflate(R.layout.mensajeconfirmacion, null)
+
+        // Crear el AlertDialog
+        val builder = AlertDialog.Builder(this)
+        builder.setView(dialogView)
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
+        }
+
+        // Mostrar el diálogo
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+    private fun mostrarDialogomal() {
+        // Inflar el layout personalizado
+        val inflater: LayoutInflater = layoutInflater
+        val dialogView = inflater.inflate(R.layout.mensajeconfirmacion, null)
+
+        // Crear el AlertDialog
+        val builder = AlertDialog.Builder(this)
+        builder.setView(dialogView)
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
+        }
+
+        // Mostrar el diálogo
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }

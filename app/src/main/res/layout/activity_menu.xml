@@ -50,7 +50,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/lapiz" />
+            app:srcCompat="@drawable/categoria1imagen" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -95,7 +95,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/openbook" />
+            app:srcCompat="@drawable/categoria3imagen" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -141,7 +141,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/book" />
+            app:srcCompat="@drawable/categoria2imagen" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -162,7 +162,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/book" />
+            app:srcCompat="@drawable/categoria4imagen" />
 
         <TextView
             android:id="@+id/textView7"

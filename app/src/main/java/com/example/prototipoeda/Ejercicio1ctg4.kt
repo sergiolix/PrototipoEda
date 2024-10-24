@@ -27,7 +27,7 @@ class Ejercicio1ctg4 : AppCompatActivity() {
            val botonsiguiente = findViewById<Button>(R.id.BotonSiguiente)
            val Textobar = findViewById<TextView>(R.id.TextoBar)
            val TextoEjercicio= findViewById<TextView>(R.id.TextoEjerciciosCtg4)
-           val numero: Int = intent.extras?.getInt("Numero") ?:0
+           val numero: Int = intent.extras?.getInt("Numero") ?:1
            val Enviar = findViewById<Button>(R.id.BotonEnviar)
            val Erespuesta= findViewById<EditText>(R.id.TextoRespuesta)
 
