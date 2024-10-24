@@ -24,10 +24,10 @@
             android:layout_height="34dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Categoria 1"
+            android:text="Nivel Sonidos"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,10 +80,10 @@
             android:layout_height="34dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Categoria 3"
+            android:text="Nivel Palabras"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,10 +126,10 @@
             android:layout_height="34dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Categoria 2"
+            android:text="Nivel Silabas"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -167,13 +167,13 @@
         <TextView
             android:id="@+id/textView7"
             android:layout_width="129dp"
-            android:layout_height="34dp"
+            android:layout_height="46dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Categoria 4"
+            android:text="Nivel Oraciones"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

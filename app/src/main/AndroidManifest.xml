@@ -7,17 +7,20 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="EDA"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoEda"
         tools:targetApi="31">
         <activity
+            android:name=".ejercicio4ctg1"
+            android:exported="false" />
+        <activity
             android:name=".categoria4"
             android:exported="false"
             android:theme="@style/Theme.PrototipoEda" />
         <activity
-            android:name=".Ejercicio3"
+            android:name=".Ejercicio3ctg1"
             android:exported="false" />
         <activity
             android:name=".Ejercicio1ctg1"

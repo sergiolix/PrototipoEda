@@ -14,19 +14,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class Ejercicio3 : AppCompatActivity() {
+class Ejercicio3ctg1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_ejercicio3)
+        setContentView(R.layout.activity_ejercicio3ctg1)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main1)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val botonAtras = findViewById<ImageButton>(R.id.BotonAtras1)
-        val botonsiguiente = findViewById<Button>(R.id.BotonSiguiente)
-        val Textobar = findViewById<TextView>(R.id.TextoBar)
+        val botonAtras = findViewById<ImageButton>(R.id.BotonAtras1) //cree una variable
+        val botonsiguiente = findViewById<Button>(R.id.BotonSiguiente)//cree otra variable
+        val Textobar = findViewById<TextView>(R.id.TextoBar)//cree tres variables
         val TextoEjercicio = findViewById<TextView>(R.id.TextoEjercicio2Ctg1)
         val numero: Int = intent.extras?.getInt("Numero") ?: 1
         val Enviar = findViewById<Button>(R.id.ConfirmarBoton)
@@ -113,12 +113,17 @@ class Ejercicio3 : AppCompatActivity() {
         }
 
         botonsiguiente.setOnClickListener{
-            val intent = Intent(this, Ejercicio3::class.java)
+            if(numero < 6 ){
+            val intent = Intent(this, Ejercicio3ctg1::class.java)
             intent.putExtra("Numero", numero + 1)
             startActivity(intent)
+            }else{
+                Toast.makeText(this, "No hay mas Ejercicios Disponibles", Toast.LENGTH_SHORT).show()
+            }
         }
+        //
         botonAtras.setOnClickListener{
-            val intent = Intent(this,categoria4::class.java)
+            val intent = Intent(this,Categoria1::class.java)
             startActivity(intent)
         }
     }

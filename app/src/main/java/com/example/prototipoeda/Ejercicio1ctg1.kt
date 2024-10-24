@@ -41,6 +41,7 @@ class Ejercicio1ctg1 : AppCompatActivity() {
             val intent = Intent(this, Categoria1::class.java)
             startActivity(intent)
         }
+
         val datosMenu1 = mapOf(
             1 to listOf("S", R.drawable.cama, R.drawable.pato, R.drawable.silla, R.drawable.silbato),
             2 to listOf("F", R.drawable.mesa, R.drawable.foca, R.drawable.manzana, R.drawable.fuego),
@@ -53,7 +54,7 @@ class Ejercicio1ctg1 : AppCompatActivity() {
         val datosMenu2 = mapOf(
             1 to listOf("S", R.drawable.tijeras, R.drawable.lapiz1, R.drawable.cama, R.drawable.maleta),
             2 to listOf("N", R.drawable.camion, R.drawable.jabonc, R.drawable.arbol, R.drawable.mesa),
-            3 to listOf("L", R.drawable.solc, R.drawable.arbol, R.drawable.camion, R.drawable.yogurc),
+            3 to listOf("L", R.drawable.sol, R.drawable.arbol, R.drawable.camion, R.drawable.yogurc),
             4 to listOf("O", R.drawable.mesa, R.drawable.libro, R.drawable.maleta, R.drawable.ojoc),
             5 to listOf("R", R.drawable.tamborc, R.drawable.jabonc, R.drawable.manzana, R.drawable.celularc),
             6 to listOf("A", R.drawable.ojoc, R.drawable.cama, R.drawable.silla, R.drawable.camion)
@@ -129,9 +130,19 @@ class Ejercicio1ctg1 : AppCompatActivity() {
         }
 
         botonsiguiente.setOnClickListener {
+            if(NumEjercicio < 6){
             val intent = Intent(this, Ejercicio1ctg1::class.java)
             intent.putExtra("Numero", NumEjercicio + 1)
-            startActivity(intent)
+            if (MenuNum == 2){
+                intent.putExtra("menu1", 2)
+                startActivity(intent)
+            }else{
+                startActivity(intent)
+            }
+
+        }else{
+                Toast.makeText(this, "No hay mas ejercicios", Toast.LENGTH_SHORT).show()
+        }
         }
     }
 }

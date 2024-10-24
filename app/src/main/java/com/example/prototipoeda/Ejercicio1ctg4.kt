@@ -103,9 +103,13 @@ class Ejercicio1ctg4 : AppCompatActivity() {
 
         }
         botonsiguiente.setOnClickListener{
+            if(numero < 6){
             val intent = Intent(this, Ejercicio1ctg4::class.java)
             intent.putExtra("Numero", numero + 1)
             startActivity(intent)
+            }else{
+                Toast.makeText(this, "no hay mas ejercicios", Toast.LENGTH_SHORT).show()
+            }
         }
 
 

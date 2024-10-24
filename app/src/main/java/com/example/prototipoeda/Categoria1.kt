@@ -31,9 +31,13 @@ class Categoria1 : AppCompatActivity() {
         configurarBoton(BotonEjercicio1 , 1 )
         configurarBoton(BotonEjercicio2 , 2 )
         BotonEjercicio3.setOnClickListener {
-            val intent = Intent(this , Ejercicio3::class.java)
+            val intent = Intent(this , Ejercicio3ctg1::class.java)
             startActivity(intent)
 
+        }
+        BotonEjercicio4.setOnClickListener {
+            val intent = Intent(this, ejercicio4ctg1::class.java )
+            startActivity(intent)
         }
 
     }
