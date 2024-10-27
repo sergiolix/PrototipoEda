@@ -21,19 +21,19 @@
           </targets>
         </DialogSelection>
       </SelectionState>
-      <SelectionState runConfigName="niv2_sups4">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="niv2_sups1">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="niv2_ss1">
+      <SelectionState runConfigName="niv2_rf">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="niv2_ri1">
+      <SelectionState runConfigName="CatgNiv2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="niv2_ri6">
+      <SelectionState runConfigName="introniv2">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="introniv3">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

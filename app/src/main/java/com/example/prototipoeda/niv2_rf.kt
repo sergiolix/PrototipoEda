@@ -13,7 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import android.widget.VideoView
 
-class niv2_ri1 : AppCompatActivity(){
+class niv2_rf : AppCompatActivity(){
     private lateinit var opcion1: CheckBox
     private lateinit var opcion2: CheckBox
     private lateinit var opcion3: CheckBox
@@ -30,7 +30,7 @@ class niv2_ri1 : AppCompatActivity(){
         val buttonok = findViewById<Button>(R.id.buttonok)
         val mc = MediaController(this)
 
-        val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.fi)
+        val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.rf)
         vid.setMediaController(mc)
         vid.setVideoURI(path)
         vid.start()
@@ -50,7 +50,7 @@ class niv2_ri1 : AppCompatActivity(){
         Button2 = findViewById<Button>(R.id.button_2)
         atras = findViewById(R.id.BotonAtras1)
         Text3 = findViewById(R.id.textoBar)
-        texto1.text = "Seleccione dos imagenes que corresponden a las palabras que inicie con la misma silaba:"
+        texto1.text = "Seleccione las imagenes que corresponden a las palabras que termine con la misma silaba:"
     }
     private fun eje1(){
         // Obtener los elementos de la interfaz
@@ -65,7 +65,7 @@ class niv2_ri1 : AppCompatActivity(){
         }
         // Agregar imágenes a las opciones
         val opciones = arrayOf(opcion1, opcion2, opcion3, opcion4)
-        val recursos = arrayOf(R.drawable.cama12, R.drawable.casa12, R.drawable.arbol12, R.drawable.tetero12)
+        val recursos = arrayOf(R.drawable.lapiz12, R.drawable.banano12, R.drawable.libro12, R.drawable.rana12)
 
         // Configurar iconos
         for (i in opciones.indices) {
@@ -78,7 +78,7 @@ class niv2_ri1 : AppCompatActivity(){
             if (opcion2.isChecked) selectedOptions.add(opcion2.text.toString())
             if (opcion3.isChecked) selectedOptions.add(opcion3.text.toString())
             if (opcion4.isChecked) selectedOptions.add(opcion4.text.toString())
-            val opcionesCorrectas = listOf("opc1", "opc2")
+            val opcionesCorrectas = listOf("opc2", "opc4")
             verificarSeleccion(selectedOptions, opcionesCorrectas)
         }
     }
@@ -94,7 +94,7 @@ class niv2_ri1 : AppCompatActivity(){
         }
         // Agregar imágenes a las opciones
         val opciones = arrayOf(opcion1, opcion2, opcion3, opcion4)
-        val recursos = arrayOf(R.drawable.llanta12, R.drawable.lapiz12, R.drawable.lampara12, R.drawable.camion12)
+        val recursos = arrayOf(R.drawable.casa12, R.drawable.camion12, R.drawable.mesa12, R.drawable.lluvia12)
 
         // Configurar iconos
         for (i in opciones.indices) {
@@ -107,7 +107,7 @@ class niv2_ri1 : AppCompatActivity(){
             if (opcion2.isChecked) selectedOptions.add(opcion2.text.toString())
             if (opcion3.isChecked) selectedOptions.add(opcion3.text.toString())
             if (opcion4.isChecked) selectedOptions.add(opcion4.text.toString())
-            val opcionesCorrectas = listOf("opc2", "opc3")
+            val opcionesCorrectas = listOf("opc1", "opc3")
             verificarSeleccion(selectedOptions, opcionesCorrectas)
         }
     }
@@ -123,7 +123,7 @@ class niv2_ri1 : AppCompatActivity(){
         }
         // Agregar imágenes a las opciones
         val opciones = arrayOf(opcion1, opcion2, opcion3, opcion4)
-        val recursos = arrayOf(R.drawable.manzana12, R.drawable.silla12, R.drawable.banano12, R.drawable.silbato12)
+        val recursos = arrayOf(R.drawable.arbol12, R.drawable.libro12, R.drawable.maleta12, R.drawable.cometa12)
         // Configurar iconos
         for (i in opciones.indices) {
             TamImg(opciones[i], recursos[i], 230)
@@ -136,7 +136,7 @@ class niv2_ri1 : AppCompatActivity(){
             if (opcion2.isChecked) selectedOptions.add(opcion2.text.toString())
             if (opcion3.isChecked) selectedOptions.add(opcion3.text.toString())
             if (opcion4.isChecked) selectedOptions.add(opcion4.text.toString())
-            val opcionesCorrectas = listOf("opc2", "opc3")
+            val opcionesCorrectas = listOf("opc3", "opc4")
 
             verificarSeleccion(selectedOptions, opcionesCorrectas)
         }
@@ -153,7 +153,7 @@ class niv2_ri1 : AppCompatActivity(){
         }
         // Agregar imágenes a las opciones
         val opciones = arrayOf(opcion1, opcion2, opcion3, opcion4)
-        val recursos = arrayOf(R.drawable.sol12, R.drawable.maleta12, R.drawable.libro12, R.drawable.sombrero12)
+        val recursos = arrayOf(R.drawable.pato12, R.drawable.gato12, R.drawable.cama12, R.drawable.maleta12)
 
         // Configurar iconos
         for (i in opciones.indices) {
@@ -167,7 +167,7 @@ class niv2_ri1 : AppCompatActivity(){
             if (opcion2.isChecked) selectedOptions.add(opcion2.text.toString())
             if (opcion3.isChecked) selectedOptions.add(opcion3.text.toString())
             if (opcion4.isChecked) selectedOptions.add(opcion4.text.toString())
-            val opcionesCorrectas = listOf("opc1", "opc4")
+            val opcionesCorrectas = listOf("opc1", "opc2")
 
             verificarSeleccion(selectedOptions, opcionesCorrectas)
         }
@@ -184,7 +184,7 @@ class niv2_ri1 : AppCompatActivity(){
         }
         // Agregar imágenes a las opciones
         val opciones = arrayOf(opcion1, opcion2, opcion3, opcion4)
-        val recursos = arrayOf(R.drawable.maleta12, R.drawable.sol12, R.drawable.manzana12, R.drawable.silla12)
+        val recursos = arrayOf(R.drawable.casa12, R.drawable.camion12, R.drawable.avion12, R.drawable.manzana12)
 
         // Configurar iconos
         for (i in opciones.indices) {
@@ -198,8 +198,7 @@ class niv2_ri1 : AppCompatActivity(){
             if (opcion2.isChecked) selectedOptions.add(opcion2.text.toString())
             if (opcion3.isChecked) selectedOptions.add(opcion3.text.toString())
             if (opcion4.isChecked) selectedOptions.add(opcion4.text.toString())
-            val opcionesCorrectas = listOf("opc1", "opc3")
-
+            val opcionesCorrectas = listOf("opc2", "opc3")
             verificarSeleccion(selectedOptions, opcionesCorrectas)
         }
     }
@@ -215,7 +214,7 @@ class niv2_ri1 : AppCompatActivity(){
         }
         // Agregar imágenes a las opciones
         val opciones = arrayOf(opcion1, opcion2, opcion3, opcion4)
-        val recursos = arrayOf(R.drawable.tetero12, R.drawable.arbol12, R.drawable.rana12, R.drawable.raton12)
+        val recursos = arrayOf(R.drawable.oreja12, R.drawable.balon12, R.drawable.llanta12, R.drawable.oveja12)
 
         // Configurar iconos
         for (i in opciones.indices) {
@@ -229,7 +228,7 @@ class niv2_ri1 : AppCompatActivity(){
             if (opcion2.isChecked) selectedOptions.add(opcion2.text.toString())
             if (opcion3.isChecked) selectedOptions.add(opcion3.text.toString())
             if (opcion4.isChecked) selectedOptions.add(opcion4.text.toString())
-            val opcionesCorrectas = listOf("opc3", "opc4")
+            val opcionesCorrectas = listOf("opc1", "opc4")
 
             verificarSeleccion(selectedOptions, opcionesCorrectas)
         }
