@@ -237,9 +237,9 @@ class niv2_rf : AppCompatActivity(){
         if (selectedOptions.size == 2) {
             // Verificar si ambas opciones seleccionadas son las correctas
             if (selectedOptions.containsAll(opcionesCorrectas)) {
-                mostrarDialogoFelicitaciones()
+                DialogUtils.mostrarDialogoPersonalizado(this, "correcto",R.drawable.feliz)
             } else {
-                mostrarDialogomal()
+                DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
             }
         } else {
             // Mostrar mensaje si no se seleccionaron exactamente dos opciones
@@ -252,36 +252,5 @@ class niv2_rf : AppCompatActivity(){
         drawable.setBounds(0, 0, tamano, tamano) // Ajustar el tamaño de la imagen
         opcion.setCompoundDrawables(drawable, null, null, null) // Establecer el ícono
     }
-    private fun mostrarDialogoFelicitaciones() {
-        // Inflar el layout personalizado
-        val inflater: LayoutInflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.fel, null)
 
-        // Crear el AlertDialog
-        val builder = AlertDialog.Builder(this)
-        builder.setView(dialogView)
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
-        }
-
-        // Mostrar el diálogo
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
-    }
-    private fun mostrarDialogomal() {
-        // Inflar el layout personalizado
-        val inflater: LayoutInflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.mal, null)
-
-        // Crear el AlertDialog
-        val builder = AlertDialog.Builder(this)
-        builder.setView(dialogView)
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
-        }
-
-        // Mostrar el diálogo
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
-    }
 }

@@ -30,11 +30,23 @@ class Menu : AppCompatActivity() {
         )
         val BotonCtg1 = findViewById<Button>(R.id.BotonCtg1)
         val BotonCtg4 = findViewById<Button>(R.id.botonCtg4)
+        val BotonCtg2 = findViewById<Button>(R.id.BotonCtg2)
+        val BotonCtg3 = findViewById<Button>(R.id.botonCtg3)
         BotonCtg1.setOnClickListener {
             val intent = Intent(this, Categoria1::class.java)
             startActivity(intent)
 
         }
+        BotonCtg2.setOnClickListener {
+            val intent = Intent(this, introniv2::class.java)
+            startActivity(intent)
+
+        }
+        BotonCtg3.setOnClickListener{
+            val intent = Intent(this, introniv3::class.java)
+            startActivity(intent)
+        }
+
         BotonCtg4.setOnClickListener {
             val intent = Intent(this, categoria4::class.java)
 

@@ -190,37 +190,10 @@ class niv2_ss1 : AppCompatActivity() {
     }
     private fun  verificar(userResponse: String, correctSyllables: String){
         if (userResponse == correctSyllables) {
-            mostrarDialogoFelicitaciones()
+            DialogUtils.mostrarDialogoPersonalizado(this, "correcto",R.drawable.feliz)
         } else {
-            mostrarDialogomal()
+            DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
         }
     }
-    private fun mostrarDialogoFelicitaciones() {
-        // Inflar el layout personalizado
-        val inflater: LayoutInflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.fel, null)
-        // Crear el AlertDialog
-        val builder = AlertDialog.Builder(this)
-        builder.setView(dialogView)
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
-        }
-        // Mostrar el diálogo
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
-    }
-    private fun mostrarDialogomal() {
-        // Inflar el layout personalizado
-        val inflater: LayoutInflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.mal, null)
-        // Crear el AlertDialog
-        val builder = AlertDialog.Builder(this)
-        builder.setView(dialogView)
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
-        }
-        // Mostrar el diálogo
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
-    }
+
 }
