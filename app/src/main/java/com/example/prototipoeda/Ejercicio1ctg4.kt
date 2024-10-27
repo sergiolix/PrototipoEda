@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -30,78 +31,41 @@ class Ejercicio1ctg4 : AppCompatActivity() {
            val numero: Int = intent.extras?.getInt("Numero") ?:1
            val Enviar = findViewById<Button>(R.id.BotonEnviar)
            val Erespuesta= findViewById<EditText>(R.id.TextoRespuesta)
+           val imagen = findViewById<ImageView>(R.id.imageView2)
 
         botonAtras.setOnClickListener{
             val intent = Intent(this,categoria4::class.java)
             startActivity(intent)
         }
 
-         when(numero){
-             1 ->{Textobar.text = "Ejercicio $numero"
-                  TextoEjercicio.text = "Ordena la Oracion: \n Me - la - para - voy - casa" }
-             2 ->{Textobar.text = "Ejercicio $numero"
-                  TextoEjercicio.text = "Ordena la Oracion: \n Amarillo - es - el - sol "}
-             3 ->{Textobar.text = "Ejercicio $numero"
-                 TextoEjercicio.text = "Ordena la Oracion: \n Con - salir - perro - a - voy - mi"}
-             4 ->{Textobar.text = "Ejercicio $numero"
-                 TextoEjercicio.text = "Ordena la Oracion: \n Ir- a – playa – la – quiero "}
-             5 ->{Textobar.text = "Ejercicio $numero"
-                 TextoEjercicio.text = "Ordena la Oracion: \n Amigos- a – con – jugar- voy "}
-             6 ->{Textobar.text = "Ejercicio $numero"
-                 TextoEjercicio.text = "Ordena la Oracion: \n Soleado – esta – día – el "}
-             else -> {Log.i("Ah?","Como paso esto")}
-         }
+        // Crea un mapa que asocie el número del ejercicio con la oración y la respuesta correcta
+        val ejercicios = mapOf(
+            1 to Triple("Me - la - para - voy - casa", "me voy para la casa",R.drawable.casa),
+            2 to Triple("Amarillo - es - el - sol", "el sol es amarillo", R.drawable.sol),
+            3 to Triple("Con - salir - perro - a - voy - mi", "voy a salir con mi perro",R.drawable.lapiz1),
+            4 to Triple("Ir- a – playa – la – quiero", "quiero ir a la playa" ,R.drawable.arbol),
+            5 to Triple("Amigos- a – con – jugar- voy", "voy a jugar con amigos",R.drawable.balon),
+            6 to Triple("Soleado – esta – día – el", "el día está soleado",R.drawable.sol)
+        )
 
+// Actualiza la vista según el número del ejercicio
+        val (oracion, respuestaCorrecta ,imagenesResId) = ejercicios[numero] ?: Triple("", "", 0)
+        Textobar.text = "Ejercicio $numero"
+        TextoEjercicio.text = "Ordena la Oracion: \n $oracion"
+        imagen.setImageResource(imagenesResId)
 
+        Enviar.setOnClickListener {
+            val respuesta = Erespuesta.text.toString().lowercase()
 
-        Enviar.setOnClickListener{
-            val respuesta = Erespuesta.text.toString()
-
-            when(numero){
-                1->{
-                    if(respuesta.lowercase() == "me voy para la casa".lowercase()){
-                        Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show()
-
-                    }else{
-                        Toast.makeText(this, "Incorrecto, Sigue intentando", Toast.LENGTH_SHORT).show()
-                    }
-                }
-                2->{if(respuesta.lowercase() == "el sol es amarillo".lowercase()){
-                    Toast.makeText(this, "correcto", Toast.LENGTH_SHORT).show()
-
-                }else{
-                    Toast.makeText(this, "Incorrecto, sigue intentando", Toast.LENGTH_SHORT).show()
-
-                }
-                }
-                3->{if(respuesta.lowercase() == "voy a salir con mi perro".lowercase()){
-                       Toast.makeText(this, "correcto", Toast.LENGTH_SHORT).show()
-                }else{
-                       Toast.makeText(this, "Incorrecto, sigue intentando", Toast.LENGTH_SHORT).show()
-                }
-                }
-                4->{if(respuesta.lowercase() == "quiero ir a la playa".lowercase()){
-                        Toast.makeText(this, "correcto", Toast.LENGTH_SHORT).show()
-                }else{
-                        Toast.makeText(this, "Incorrecto, sigue intentando", Toast.LENGTH_SHORT).show()
-                }
-                }
-                5->{if(respuesta.lowercase() == "voy a jugar con amigos".lowercase()){
-                         Toast.makeText(this, "correcto", Toast.LENGTH_SHORT).show()
-                }else{
-                        Toast.makeText(this, "Incorrecto, sigue intentando", Toast.LENGTH_SHORT).show()
-                }
-                }
-                6->{if(respuesta.lowercase() == "el dia esta soleado".lowercase()){
-                       Toast.makeText(this, "correcto", Toast.LENGTH_SHORT).show()
-                }else{
-                       Toast.makeText(this, "Incorrecto, sigue intentando", Toast.LENGTH_SHORT).show()
-                }
-                }
-                else->{}
+            if (respuesta == respuestaCorrecta.lowercase()) {
+                DialogUtils.mostrarDialogoPersonalizado(this, "correcto",R.drawable.feliz)
+            } else {
+                DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
             }
 
-        }
+
+
+    }
         botonsiguiente.setOnClickListener{
             if(numero < 6){
             val intent = Intent(this, Ejercicio1ctg4::class.java)

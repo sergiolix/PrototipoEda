@@ -32,6 +32,7 @@ class categoria4 : AppCompatActivity() {
             val intent = Intent (this,Menu::class.java)
             startActivity(intent)
         }
+        mostrarTutorial(this, "Nivel Oraciones","En este nivel solo encontraras un tipo de ejercicio, en el cual solo tendras que ordenar la oracion que se te dara en desorden, puedes escoger el ejercicio que mas te guste desde el menu, pero te recomendamos empezar desde el numero 1.", R.raw.audiocategoria4,"Pantalla4")
     }
 
 

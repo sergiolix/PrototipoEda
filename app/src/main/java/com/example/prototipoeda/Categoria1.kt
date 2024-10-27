@@ -24,6 +24,8 @@ class Categoria1 : AppCompatActivity() {
         val BotonEjercicio3 = findViewById<ImageButton>(R.id.BotonEjercicio3)
         val BotonEjercicio4 = findViewById<ImageButton>(R.id.BotonEjercicio4)
 
+        mostrarTutorial(this,"Nivel Sonidos","Hola En Esta Categoría Encontraras 4 Niveles cada uno es diferente del otro,\n" +
+                "En el primero tendrás que seleccionar las imágenes que Empiezan por el mismo sonido de la letra, El Segundo es similar al primero pero esta vez con el sonido que sea igual pero esta vez al final, El Numero tres es sobre cuantas veces esta el sonido de una letra en una palabra, y el numero 4 trata sobre buscar la letra diferente entre muchas letras. También cuando Selecciones la categoría Dentro de esta tendrá un Tutorial en el Primer Ejercicio que realices. ",R.raw.audiocategoria1,"Pantalla2")
         BackButton.setOnClickListener{
              val intent = Intent(this,Menu::class.java)
              startActivity(intent)

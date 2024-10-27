@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -45,20 +47,80 @@ class Ejercicio1ctg1 : AppCompatActivity() {
         }
 
         val datosMenu1 = mapOf(
-            1 to listOf("S", R.drawable.cama, R.drawable.pato, R.drawable.silla, R.drawable.silbato),
-            2 to listOf("F", R.drawable.mesa, R.drawable.foca, R.drawable.manzana, R.drawable.fuego),
-            3 to listOf("T", R.drawable.balon, R.drawable.tetero, R.drawable.tijeras, R.drawable.banano),
-            4 to listOf("M", R.drawable.casa, R.drawable.silla, R.drawable.maleta, R.drawable.mariposac),
-            5 to listOf("L", R.drawable.libro, R.drawable.lapiz1, R.drawable.casa, R.drawable.balon),
-            6 to listOf("Y", R.drawable.maleta, R.drawable.yoyoc, R.drawable.lapiz1, R.drawable.yogurc)
+            1 to listOf(
+                "S",
+                R.drawable.cama,
+                R.drawable.pato,
+                R.drawable.silla,
+                R.drawable.silbato
+            ),
+            2 to listOf(
+                "F",
+                R.drawable.mesa,
+                R.drawable.foca,
+                R.drawable.manzana,
+                R.drawable.fuego
+            ),
+            3 to listOf(
+                "T",
+                R.drawable.balon,
+                R.drawable.tetero,
+                R.drawable.tijeras,
+                R.drawable.banano
+            ),
+            4 to listOf(
+                "M",
+                R.drawable.casa,
+                R.drawable.silla,
+                R.drawable.maleta,
+                R.drawable.mariposac
+            ),
+            5 to listOf(
+                "L",
+                R.drawable.libro,
+                R.drawable.lapiz1,
+                R.drawable.casa,
+                R.drawable.balon
+            ),
+            6 to listOf(
+                "LL",
+                R.drawable.maleta,
+                R.drawable.llave,
+                R.drawable.lapiz1,
+                R.drawable.llanta
+            )
         )
 
         val datosMenu2 = mapOf(
-            1 to listOf("S", R.drawable.tijeras, R.drawable.lapiz1, R.drawable.cama, R.drawable.maleta),
-            2 to listOf("N", R.drawable.camion, R.drawable.jabonc, R.drawable.arbol, R.drawable.mesa),
-            3 to listOf("L", R.drawable.sol, R.drawable.arbol, R.drawable.camion, R.drawable.yogurc),
+            1 to listOf(
+                "S",
+                R.drawable.tijeras,
+                R.drawable.lapiz1,
+                R.drawable.cama,
+                R.drawable.maleta
+            ),
+            2 to listOf(
+                "N",
+                R.drawable.camion,
+                R.drawable.jabonc,
+                R.drawable.arbol,
+                R.drawable.mesa
+            ),
+            3 to listOf(
+                "L",
+                R.drawable.sol,
+                R.drawable.arbol,
+                R.drawable.camion,
+                R.drawable.llanta
+            ),
             4 to listOf("O", R.drawable.mesa, R.drawable.libro, R.drawable.maleta, R.drawable.ojoc),
-            5 to listOf("R", R.drawable.tamborc, R.drawable.jabonc, R.drawable.manzana, R.drawable.celularc),
+            5 to listOf(
+                "R",
+                R.drawable.tamborc,
+                R.drawable.jabonc,
+                R.drawable.manzana,
+                R.drawable.celularc
+            ),
             6 to listOf("A", R.drawable.ojoc, R.drawable.cama, R.drawable.silla, R.drawable.camion)
         )
 
@@ -68,7 +130,7 @@ class Ejercicio1ctg1 : AppCompatActivity() {
 
         val datos = datosEjercicios[NumEjercicio]
 
-        if (datos != null ) {
+        if (datos != null) {
             Textobar.text = "Ejercicio $NumEjercicio"
             LetraTitulo.text = datos[0] as String
             Imagen1.setImageResource(datos[1] as Int)
@@ -121,62 +183,32 @@ class Ejercicio1ctg1 : AppCompatActivity() {
             if (combinacionCorrecta != null) {
                 val esCorrecto = combinacionCorrecta.all { estados[it] }
                 if (esCorrecto) {
-                    mostrarDialogoFelicitaciones()
+                    DialogUtils.mostrarDialogoPersonalizado(this, "correcto",R.drawable.feliz)
                 } else {
-                    mostrarDialogomal()
+                    DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
                 }
             } else {
 
-                Toast.makeText(this, "Incorrecto, Sigue intentando", Toast.LENGTH_SHORT).show()
+                DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
             }
         }
 
         botonsiguiente.setOnClickListener {
-            if(NumEjercicio < 6){
-            val intent = Intent(this, Ejercicio1ctg1::class.java)
-            intent.putExtra("Numero", NumEjercicio + 1)
-            if (MenuNum == 2){
-                intent.putExtra("menu1", 2)
-                startActivity(intent)
-            }else{
-                startActivity(intent)
-            }
+            if (NumEjercicio < 6) {
+                val intent = Intent(this, Ejercicio1ctg1::class.java)
+                intent.putExtra("Numero", NumEjercicio + 1)
+                if (MenuNum == 2) {
+                    intent.putExtra("menu1", 2)
+                    startActivity(intent)
+                } else {
+                    startActivity(intent)
+                }
 
-        }else{
+            } else {
                 Toast.makeText(this, "No hay mas ejercicios", Toast.LENGTH_SHORT).show()
-        }
+            }
         }
     }
-    private fun mostrarDialogoFelicitaciones() {
-        // Inflar el layout personalizado
-        val inflater: LayoutInflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.mensajeconfirmacion, null)
 
-        // Crear el AlertDialog
-        val builder = AlertDialog.Builder(this)
-        builder.setView(dialogView)
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
-        }
 
-        // Mostrar el diálogo
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
-    }
-    private fun mostrarDialogomal() {
-        // Inflar el layout personalizado
-        val inflater: LayoutInflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.mensajeconfirmacion, null)
-
-        // Crear el AlertDialog
-        val builder = AlertDialog.Builder(this)
-        builder.setView(dialogView)
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss() // Cerrar el diálogo cuando se presione OK
-        }
-
-        // Mostrar el diálogo
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
-    }
 }

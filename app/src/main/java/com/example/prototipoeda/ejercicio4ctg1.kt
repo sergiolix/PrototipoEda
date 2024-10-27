@@ -124,9 +124,9 @@ class ejercicio4ctg1 : AppCompatActivity() {
                 else -> false
             }
             if (esCorrecto) {
-                Toast.makeText(this, "¡Correcto!", Toast.LENGTH_SHORT).show()
+                DialogUtils.mostrarDialogoPersonalizado(this, "correcto",R.drawable.feliz)
             } else {
-                Toast.makeText(this, "Intenta de nuevo", Toast.LENGTH_SHORT).show()
+                DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
             }
         }
 

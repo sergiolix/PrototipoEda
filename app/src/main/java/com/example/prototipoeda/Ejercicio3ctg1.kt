@@ -102,13 +102,13 @@ class Ejercicio3ctg1 : AppCompatActivity() {
             if (combinacionCorrecta != null) {
 
                 if (combinacionCorrecta == respuesta) {
-                    Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show()
+                    DialogUtils.mostrarDialogoPersonalizado(this, "correcto",R.drawable.feliz)
                 } else {
-                    Toast.makeText(this, "Incorrecto, Sigue intentando", Toast.LENGTH_SHORT).show()
+                    DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
                 }
             } else {
 
-                Toast.makeText(this, "Incorrecto, Sigue intentando", Toast.LENGTH_SHORT).show()
+                DialogUtils.mostrarDialogoPersonalizado(this, "Incorrecto Sigue Intentando",R.drawable.triste)
             }
         }
 
