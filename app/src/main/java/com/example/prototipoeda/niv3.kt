@@ -1,15 +1,19 @@
 package com.example.prototipoeda
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.MediaController
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
+import android.widget.VideoView
+
 class niv3 : AppCompatActivity() {
     private lateinit var palText: TextView
     private lateinit var userInput: EditText
@@ -21,7 +25,18 @@ class niv3 : AppCompatActivity() {
     private lateinit var Text3: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        eje1()
+        setContentView(R.layout.introvid)
+        val vid = findViewById<VideoView>(R.id.videoView_video)
+        val buttonok = findViewById<Button>(R.id.buttonok)
+        val mc = MediaController(this)
+
+        val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.niv3)
+        vid.setMediaController(mc)
+        vid.setVideoURI(path)
+        vid.start()
+        buttonok.setOnClickListener{
+            eje1()
+        }
     }
     private fun inte(){
         setContentView(R.layout.nivel3)
