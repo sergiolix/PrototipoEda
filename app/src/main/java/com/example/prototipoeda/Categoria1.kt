@@ -32,21 +32,14 @@ class Categoria1 : AppCompatActivity() {
         }
         configurarBoton(BotonEjercicio1 , 1 )
         configurarBoton(BotonEjercicio2 , 2 )
-        BotonEjercicio3.setOnClickListener {
-            val intent = Intent(this , Ejercicio3ctg1::class.java)
-            startActivity(intent)
-
-        }
-        BotonEjercicio4.setOnClickListener {
-            val intent = Intent(this, ejercicio4ctg1::class.java )
-            startActivity(intent)
-        }
+        configurarBoton(BotonEjercicio3,3)
+        configurarBoton(BotonEjercicio4, 4)
 
     }
     fun configurarBoton(boton: ImageButton, numero1: Int) {
         boton.setOnClickListener {
-            val intent1 = Intent(this, Ejercicio1ctg1::class.java)
-            intent1.putExtra("menu1", numero1)
+            val intent1 = Intent(this, Video::class.java)
+            intent1.putExtra("Video", numero1)
             startActivity(intent1)
         }
     }

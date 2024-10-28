@@ -24,7 +24,11 @@ class categoria4 : AppCompatActivity() {
            val BotonEjercicio4= findViewById<ImageButton>(R.id.BotonEjercicio4)
            val atras = findViewById<ImageButton>(R.id.BotonAtras1)
 
-        configurarBoton(BotonEjercicio1, 1)
+        BotonEjercicio1.setOnClickListener {
+            val intent = Intent(this,Video::class.java)
+            intent.putExtra("Video", 5)
+            startActivity(intent)
+        }
         configurarBoton(BotonEjercicio2, 2)
         configurarBoton(BotonEjercicio3, 3)
         configurarBoton(BotonEjercicio4, 4)

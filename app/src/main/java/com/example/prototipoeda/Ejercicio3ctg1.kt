@@ -1,14 +1,17 @@
 package com.example.prototipoeda
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.MediaController
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,6 +27,7 @@ class Ejercicio3ctg1 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val botonAtras = findViewById<ImageButton>(R.id.BotonAtras1) //cree una variable
         val botonsiguiente = findViewById<Button>(R.id.BotonSiguiente)//cree otra variable
         val Textobar = findViewById<TextView>(R.id.TextoBar)//cree tres variables

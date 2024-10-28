@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoEda"
         tools:targetApi="31">
+        <activity android:name=".Video"></activity>
         <activity
             android:name=".ejercicio4ctg1"
             android:exported="false" />
