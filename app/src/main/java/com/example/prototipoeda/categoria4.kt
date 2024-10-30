@@ -36,7 +36,12 @@ class categoria4 : AppCompatActivity() {
             val intent = Intent (this,Menu::class.java)
             startActivity(intent)
         }
-        mostrarTutorial(this, "Nivel Oraciones","En este nivel solo encontraras un tipo de ejercicio, en el cual solo tendras que ordenar la oracion que se te dara en desorden, puedes escoger el ejercicio que mas te guste desde el menu, pero te recomendamos empezar desde el numero 1.", R.raw.audiocategoria4,"Pantalla4")
+        mostrarTutorial(this, "Oraciones","Una oración es una unidad gramatical que se compone de un sujeto y un predicado. El individuo siempre tiene un sustantivo como núcleo y nunca puede comenzar por una preposición. El predicado se fundamenta en un verbo, que puede ir conjugado en un tiempo sencillo, compuesto o ser una perífrasis verbal.\n" +
+                "Tipos de oraciones \n" +
+                "•\tOraciones gramaticales simples\n" +
+                "•\tOraciones gramaticales Compuestas \n" +
+                "•\tOraciones gramaticales activas\n" +
+                "•\tOraciones gramaticales pasivas", R.raw.audiocategoria4,"Pantalla4")
     }
 
 
