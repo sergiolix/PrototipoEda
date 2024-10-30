@@ -146,10 +146,10 @@
 
         <TextView
             android:id="@+id/TextoLetra"
-            android:layout_width="296dp"
-            android:layout_height="37dp"
+            android:layout_width="350dp"
+            android:layout_height="33dp"
             android:layout_marginTop="32dp"
-            android:text="Letra"
+            android:text="cuál de estos empieza por /sss/"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24sp"

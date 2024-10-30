@@ -37,7 +37,7 @@
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Categoria 1"
+        android:text="Sonidos"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"

@@ -41,42 +41,42 @@ class Ejercicio3ctg1 : AppCompatActivity() {
         when (numero) {
             1 -> {
                 Textobar.text = "Ejercicio $numero"
-                textosonido.text = "Sonido de A"
+                textosonido.text = "Cuentas Veces Se Repite El Sonido de A"
                 TextoEjercicio.text = "Casa"
                 ImagenCentral.setImageResource(R.drawable.casa)
             }
 
             2 -> {
                 Textobar.text = "Ejercicio $numero"
-                textosonido.text = "Sonido de B"
+                textosonido.text = "Cuentas Veces Se Repite El Sonido de Sonido de B"
                 TextoEjercicio.text = "Tambor "
                 ImagenCentral.setImageResource(R.drawable.tamborc)
             }
 
             3 -> {
                 Textobar.text = "Ejercicio $numero"
-                textosonido.text = "Sonido de O"
+                textosonido.text = "Cuentas Veces Se Repite El Sonido de Sonido de O"
                 TextoEjercicio.text = "Ojo"
                 ImagenCentral.setImageResource(R.drawable.ojoc)
             }
 
             4 -> {
                 Textobar.text = "Ejercicio $numero"
-                textosonido.text = "Sonido de T"
+                textosonido.text = "Cuentas Veces Se Repite El Sonido de Sonido de T"
                 TextoEjercicio.text = "Tomate"
                 ImagenCentral.setImageResource(R.drawable.tomate)
             }
 
             5 -> {
                 Textobar.text = "Ejercicio $numero"
-                textosonido.text = "Sonido de R"
+                textosonido.text = "Cuentas Veces Se Repite El Sonido de Sonido de R"
                 TextoEjercicio.text = "Arbol"
                 ImagenCentral.setImageResource(R.drawable.arbol)
             }
 
             6 -> {
                 Textobar.text = "Ejercicio $numero"
-                textosonido.text = "Sonido de A"
+                textosonido.text = "Cuentas Veces Se Repite El Sonido de Sonido de A"
                 TextoEjercicio.text = "Camara "
                 ImagenCentral.setImageResource(R.drawable.camarac)
             }

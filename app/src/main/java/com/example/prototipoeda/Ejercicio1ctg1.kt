@@ -48,42 +48,42 @@ class Ejercicio1ctg1 : AppCompatActivity() {
 
         val datosMenu1 = mapOf(
             1 to listOf(
-                "S",
+                "Cuál de estos empieza por  S",
                 R.drawable.cama,
                 R.drawable.pato,
                 R.drawable.silla,
                 R.drawable.silbato
             ),
             2 to listOf(
-                "F",
+                "Cuál de estos empieza por  F",
                 R.drawable.mesa,
                 R.drawable.foca,
                 R.drawable.manzana,
                 R.drawable.fuego
             ),
             3 to listOf(
-                "T",
+                "Cuál de estos empieza por  T",
                 R.drawable.balon,
                 R.drawable.tetero,
                 R.drawable.tijeras,
                 R.drawable.banano
             ),
             4 to listOf(
-                "M",
+                "Cuál de estos empieza por  M",
                 R.drawable.casa,
                 R.drawable.silla,
                 R.drawable.maleta,
                 R.drawable.mariposac
             ),
             5 to listOf(
-                "L",
+                "Cuál de estos empieza por  L",
                 R.drawable.libro,
                 R.drawable.lapiz1,
                 R.drawable.casa,
                 R.drawable.balon
             ),
             6 to listOf(
-                "LL",
+                "Cuál de estos empieza por  LL",
                 R.drawable.maleta,
                 R.drawable.llave,
                 R.drawable.lapiz1,
@@ -93,35 +93,35 @@ class Ejercicio1ctg1 : AppCompatActivity() {
 
         val datosMenu2 = mapOf(
             1 to listOf(
-                "S",
+                "Cuál de estos Termina por S",
                 R.drawable.tijeras,
                 R.drawable.lapiz1,
                 R.drawable.cama,
                 R.drawable.maleta
             ),
             2 to listOf(
-                "N",
+                "Cuál de estos termina por N",
                 R.drawable.camion,
                 R.drawable.jabonc,
                 R.drawable.arbol,
                 R.drawable.mesa
             ),
             3 to listOf(
-                "L",
+                "Cuál de estos termina por  L",
                 R.drawable.sol,
                 R.drawable.arbol,
                 R.drawable.camion,
                 R.drawable.llanta
             ),
-            4 to listOf("O", R.drawable.mesa, R.drawable.libro, R.drawable.maleta, R.drawable.ojoc),
+            4 to listOf("Cuál de estos termina por  O", R.drawable.mesa, R.drawable.libro, R.drawable.maleta, R.drawable.ojoc),
             5 to listOf(
-                "R",
+                "Cuál de estos termina por  R",
                 R.drawable.tamborc,
                 R.drawable.jabonc,
                 R.drawable.manzana,
                 R.drawable.celularc
             ),
-            6 to listOf("A", R.drawable.ojoc, R.drawable.cama, R.drawable.silla, R.drawable.camion)
+            6 to listOf("Cuál de estos termina por  A", R.drawable.ojoc, R.drawable.cama, R.drawable.silla, R.drawable.camion)
         )
 
 

@@ -18,23 +18,23 @@ class Video : AppCompatActivity() {
         val mc = MediaController(this)
 
         when(Numvideo){
-            1 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.rf)
+            1 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.ejercicio1)
                 vid.setMediaController(mc)
                 vid.setVideoURI(path)
                 vid.start()}
-            2 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.rf)
+            2 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.ejercicio2)
                 vid.setMediaController(mc)
                 vid.setVideoURI(path)
                 vid.start()}
-            3 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.rf)
+            3 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.ejercicio3)
                 vid.setMediaController(mc)
                 vid.setVideoURI(path)
                 vid.start()}
-            4 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.rf)
+            4 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.ejercicio4)
                 vid.setMediaController(mc)
                 vid.setVideoURI(path)
                 vid.start()}
-            5 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.rf)
+            5 -> {val path = Uri.parse("android.resource://com.example.prototipoeda/" + R.raw.ejercicio5)
                 vid.setMediaController(mc)
                 vid.setVideoURI(path)
                 vid.start()}
