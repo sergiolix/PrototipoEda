@@ -24,15 +24,15 @@ class Categoria1 : AppCompatActivity() {
         val BotonEjercicio3 = findViewById<ImageButton>(R.id.BotonEjercicio3)
         val BotonEjercicio4 = findViewById<ImageButton>(R.id.BotonEjercicio4)
 
-        mostrarTutorial(this,"Fonemas"," Un fonema es una unidad mínima de articulación cuyo sonido puede ser vocálico o consonántico, y, por consiguiente, la unión de varios fonemas forma una palabra. Es una unidad compleja del lenguaje pero que para simplificar su explicación diremos que es una unidad mínima de articulación. ",R.raw.audiocategoria1,"Pantalla2")
+        mostrarTutorial(this,"Fonema","Un fonema es una unidad mínima de articulación cuyo sonido puede ser vocálico o consonántico, y, por consiguiente, la unión de varios fonemas forma una palabra. Es una unidad compleja del lenguaje pero que para simplificar su explicación diremos que es una unidad mínima de articulación. ",R.raw.audiocategoria1,"Pantalla2")
         BackButton.setOnClickListener{
              val intent = Intent(this,Menu::class.java)
              startActivity(intent)
         }
         configurarBoton(BotonEjercicio1 , 1 )
         configurarBoton(BotonEjercicio2 , 2 )
-        configurarBoton(BotonEjercicio3,3)
-        configurarBoton(BotonEjercicio4, 4)
+        configurarBoton(BotonEjercicio3 , 3 )
+        configurarBoton(BotonEjercicio4 , 4 )
 
     }
     fun configurarBoton(boton: ImageButton, numero1: Int) {
