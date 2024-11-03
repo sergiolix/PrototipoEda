@@ -54,7 +54,5 @@ class Menu : AppCompatActivity() {
 
 
         }
-
     }
-
 }

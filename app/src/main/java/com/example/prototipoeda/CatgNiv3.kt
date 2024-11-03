@@ -28,11 +28,7 @@ class CatgNiv3 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        mostrarTutorial(this, "Palabra", "Una palabra es la unidad mínima gramatical dotada de significado propio. En la cadena hablada, se separa de las demás mediante pausas, y en la escritura mediante espacios en blanco.\n" +
-                "\n" +
-                "Estructura de la palabra\b\n" +
-                "\n" +
-                "Se divide en estructuras mas pequeñas llamadas raíz y monemas, estos se pueden ser de distintas clases", R.raw.palabra,"palabra")
+        mostrarTutorial(this, "Palabra", "", R.raw.palabra,"palabra")
         BotonEjercicio1.setOnClickListener{
             val intent = Intent(this,niv3::class.java)
             startActivity(intent)

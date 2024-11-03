@@ -29,6 +29,7 @@
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/BotonAtras1"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/text_1"
         android:layout_width="319dp"

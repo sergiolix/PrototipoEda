@@ -61,7 +61,7 @@ class niv3 : AppCompatActivity() {
         Button2.setOnClickListener{
             eje2()
         }
-        Text2.text = "Que le falta piz para convertirse"
+        Text2.text = "Lo que le falta piz para convertirse en"
         // Asignar una imagen desde los recursos drawable
         imagen.setImageResource(R.drawable.lapiz12)
         // Palabra que debe quitar
@@ -84,7 +84,7 @@ class niv3 : AppCompatActivity() {
         Button2.setOnClickListener{
             eje3()
         }
-        Text2.text = "Que le falta na para convertirse"
+        Text2.text = "Lo que le falta na para convertirse en "
         // Asignar una imagen desde los recursos drawable
         imagen.setImageResource(R.drawable.rana12)
         // Palabra que debe quitar
@@ -107,9 +107,9 @@ class niv3 : AppCompatActivity() {
         Button2.setOnClickListener{
             eje4()
         }
-        Text2.text = "Que le falta male para convertirse"
+        Text2.text = "Lo que le falta male para convertirse en"
         // Asignar una imagen desde los recursos drawable
-        imagen.setImageResource(R.drawable.maleta12)
+        imagen.setImageResource(R.drawable.maleta)
         // Palabra que debe quitar
         val pal = "ta"
         palText.text = ""
@@ -130,7 +130,7 @@ class niv3 : AppCompatActivity() {
         Button2.setOnClickListener{
             eje5()
         }
-        Text2.text = "Que le falta bro para convertirse"
+        Text2.text = "Lo que le falta bro para convertirse en"
         // Asignar una imagen desde los recursos drawable
         imagen.setImageResource(R.drawable.libro12)
         // Palabra que debe quitar
@@ -153,7 +153,7 @@ class niv3 : AppCompatActivity() {
         Button2.setOnClickListener {
             eje6()
         }
-        Text2.text = "Que le falta ba para convertirse"
+        Text2.text = "Lo que le falta ba para convertirse en"
         // Asignar una imagen desde los recursos drawable
         imagen.setImageResource(R.drawable.balon12)
         // Palabra que debe quitar
@@ -176,9 +176,9 @@ class niv3 : AppCompatActivity() {
         Button2.setOnClickListener{
             Toast.makeText(this, "No hay más ejercicios disponibles", Toast.LENGTH_SHORT).show()
         }
-        Text2.text = "Que le falta meta para convertirse"
+        Text2.text = "lo que le falta meta para convertirse en"
         // Asignar una imagen desde los recursos drawable
-        imagen.setImageResource(R.drawable.ciempies12)
+        imagen.setImageResource(R.drawable.cometa12)
 
         // Palabra que debe quitar
         val pal = "co"
