@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/textoBar"
-        android:layout_width="132dp"
-        android:layout_height="46dp"
+        android:layout_width="203dp"
+        android:layout_height="43dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:text=""
@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/text_1"
-        android:layout_width="319dp"
-        android:layout_height="91dp"
+        android:layout_width="324dp"
+        android:layout_height="100dp"
         android:text=""
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -45,8 +45,8 @@
 
     <TextView
         android:id="@+id/text_2"
-        android:layout_width="295dp"
-        android:layout_height="43dp"
+        android:layout_width="298dp"
+        android:layout_height="57dp"
         android:text=""
         android:textColor="@color/white"
         android:textSize="18sp"

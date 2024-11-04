@@ -23,12 +23,14 @@
             android:layout_height="74dp"
             android:layout_marginBottom="28dp"
             android:text="Siguiente Ejercicio"
+            android:textSize="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Imagen3"
             app:layout_constraintVertical_bias="0.403" />
+
         <Button
             android:id="@+id/BotonEnviar"
             style="@style/Widget.AppCompat.Button"
@@ -37,6 +39,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginBottom="28dp"
             android:text="Confirmar"
+            android:textSize="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.416"
@@ -105,12 +108,12 @@
 
         <TextView
             android:id="@+id/textoBar"
-            android:layout_width="132dp"
+            android:layout_width="174dp"
             android:layout_height="46dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
             android:text="Ejercicio"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/BotonAtras1"
@@ -145,26 +148,28 @@
 
         <TextView
             android:id="@+id/TextoLetra"
-            android:layout_width="350dp"
-            android:layout_height="33dp"
+            android:layout_width="365dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
-            android:text="cuál de estos empieza por /sss/"
+            android:layout_marginEnd="8dp"
+            android:text="cuál de estos empieza por \n /sss/"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:layout_constraintVertical_bias="0.011" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
+            android:layout_width="159dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
             android:text="Selecciona 2 Imagenes"
+            android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
